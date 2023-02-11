@@ -1,0 +1,7 @@
+
+Functional Programming (FP)
+
+- Use pure functions
+- Prefer recursion to loops
+- Functions are first class types
+- Data is immutable
