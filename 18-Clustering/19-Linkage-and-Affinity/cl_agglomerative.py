@@ -29,7 +29,7 @@ class Iris:
     def cluster(self):
         X = self._df.iloc[:,0:4]
         X = StandardScaler().fit_transform(X)
-        model = AgglomerativeClustering(n_clusters=3, linkage='complete', affinity='cosine')
+        model = AgglomerativeClustering(n_clusters=3, linkage='complete', metric='cosine')
         return model.fit_predict(X)
 
     def plot(self, clusters):

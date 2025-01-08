@@ -18,6 +18,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("grapes.csv")
+df = df.drop('color', axis=1)
 print(df.corr())
 
 fig = plt.figure(figsize=(16,9))

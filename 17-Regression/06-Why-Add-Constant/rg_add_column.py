@@ -30,8 +30,9 @@ def main():
 
     print(X)
 
-    intercept = result.params[0]
-    gradient = result.params[1]
+    intercept = result.params.iloc[0]
+    gradient = result.params.iloc[1]
+
     y = intercept + gradient * x
 
     print(np.matmul(X, result.params))

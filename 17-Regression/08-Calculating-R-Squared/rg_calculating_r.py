@@ -29,8 +29,9 @@ def main():
     model = sm.OLS(y_actual, X)
     result = model.fit()
 
-    intercept = result.params[0]
-    gradient = result.params[1]
+    intercept = result.params.iloc[0]
+    gradient = result.params.iloc[1]
+
     y_predicted = intercept + gradient * x
 
     ax.plot(df.index, y_actual)

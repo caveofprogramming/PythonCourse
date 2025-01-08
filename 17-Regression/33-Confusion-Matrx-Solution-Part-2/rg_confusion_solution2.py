@@ -47,4 +47,6 @@ cm_display.plot()
 plt.show()
 
 df.drop('id', axis=1, inplace=True)
+df.drop('gender', axis=1, inplace=True)
+
 print(df.corr())

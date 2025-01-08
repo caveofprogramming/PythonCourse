@@ -9,10 +9,13 @@ def main():
 
     print(df)
 
+    df = df.drop('Gender', axis=1)
+
     corr = df.corr()
     np.fill_diagonal(corr.values, 0)
 
     print(corr)
+
 
 if __name__ == "__main__":  
     main()

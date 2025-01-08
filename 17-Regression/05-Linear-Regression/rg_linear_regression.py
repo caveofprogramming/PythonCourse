@@ -29,8 +29,8 @@ def main():
     model = sm.OLS(df['weight'], X)
     result = model.fit()
 
-    intercept = result.params[0]
-    gradient = result.params[1]
+    intercept = result.params.iloc[0]
+    gradient = result.params.iloc[1]
 
     y = intercept + gradient * x
 

@@ -10,6 +10,7 @@ def plot(df):
     ax.set_ylabel('Spending')
     ax.set_zlabel('Age')
 
+    df.drop('gender', axis=1, inplace=True)
     means = df.groupby(by='cluster').mean()
 
     ax.scatter(means['income'], means['spending'], means['age'], color='red', s=100)
